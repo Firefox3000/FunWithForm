@@ -25,6 +25,33 @@ form {
 }
 
 
+.btn {
+  position: relative;
+  display: block;
+  /* color: white; */
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid var(--red);
+  padding: 14px 60px;
+  overflow: hidden;
+  transition: .8s all ease;
+  text-align: center;
+  background: none;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--red);
+  z-index: -1;
+  transition: .8s;
+}
+
+
 /*Buttons*/
 section h2{
   color: whitesmoke;
@@ -43,15 +70,15 @@ section {
   grid-gap: .8rem;
 }
 
+
 a.btn {
-  /* base styling */
   position: relative;
   display: block;
-  color: var(--white);
+  color: white;
   font-size: 1rem;
   text-decoration: none;
   margin: 30px 0;
-  border: 2px solid var(--red);
+  border: 2px solid #ff7675;
   padding: 14px 60px;
   overflow: hidden;
   transition: 1s all ease;
@@ -59,17 +86,18 @@ a.btn {
   text-align: center;
 }
 
-a.btn::before {
-  /* base styling */
-  background-color: var(--red);
+
+.btn::before{
+  background: #ff7675;
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
   z-index: -1;
-  transition: all .6s ease;
+  transition: all 0.6s ease;
 }
+
 
 .btn1::before {
   width: 0;
@@ -112,7 +140,7 @@ a.btn::before {
 
 /*2e button set*/
 
-button.btn {
+.btna {
   position: relative;
   display: block;
   /* color: white; */
@@ -127,7 +155,7 @@ button.btn {
   background: none;
 }
 
-button.btn::before {
+.btna::before {
   content: "";
   position: absolute;
   left: 0;
@@ -179,9 +207,6 @@ button.btn7::before, button.btn8::before {
 
 
 /*3e button set*/
-
-
-
 .btnz {
   margin: 30px 0;
   background: none;
@@ -234,34 +259,32 @@ button.btn7::before, button.btn8::before {
 
 
 
-
-
 /*4e button set*/
-
-
 .btn13 {
-  background: none;
-  box-sizing: border-box;
-  display: inline-block;
   outline: none;
   position: relative;
   transition: all 0.3s;
 
   border: 2px solid var(--red);
-  color: var(--red);
+  color: var(--white);
 }
 
 .btn13::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+
   width: 0%;
   height: 100%;
   top: 0;
   left: 0;
-  background: var(--blue);
+  background: var(--red);
 }
 
 .btn13:hover,
 .btn13:active {
-  color: white;
+  color: var(--white);
 }
 
 .btn13:hover::after,
@@ -269,12 +292,107 @@ button.btn7::before, button.btn8::before {
   width: 100%;
 }
 
-.btn13:after {
+
+.btn14 {
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+
+  border: 2px solid var(--red);
+  color: var(--white);
+}
+
+.btn14::after {
   content: '';
   position: absolute;
   z-index: -1;
   transition: all 0.3s;
+
+  width: 0%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: var(--red);
 }
+
+.btn14:hover,
+.btn14:active {
+  color: var(--white);
+}
+
+.btn14:hover::after,
+.btn14:active::after {
+  width: 100%;
+}
+
+
+.btn15 {
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+
+  border: 2px solid var(--red);
+  color: var(--white);
+}
+
+.btn15::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: var(--red);
+}
+
+.btn15:hover,
+.btn15:active {
+  color: var(--white);
+}
+
+.btn15:hover::after,
+.btn15:active::after {
+  height: 100%;
+}
+
+
+
+.btn16 {
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+
+  border: 2px solid var(--red);
+  color: var(--white);
+}
+
+.btn16::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--red);
+}
+
+.btn16:hover,
+.btn16:active {
+  color: var(--white);
+}
+
+.btn16:hover::after,
+.btn16:active::after {
+  height: 100%;
+}
+
+
 
 
 
@@ -309,42 +427,6 @@ button {
 }
 
 
-.button3 {
-  background: none;
-  box-sizing: border-box;
-  display: inline-block;
-  outline: none;
-  position: relative;
-  transition: all 0.3s;
-
-  border: 2px solid var(--red);
-  color: var(--red);
-}
-
-.button3::after {
-  width: 0%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: var(--blue);
-}
-
-.button3:hover,
-.button3:active {
-  color: white;
-}
-
-.button3:hover::after,
-.button3:active::after {
-  width: 100%;
-}
-
-.button3:after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  transition: all 0.3s;
-}
 
 /* https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
 .button4 {
